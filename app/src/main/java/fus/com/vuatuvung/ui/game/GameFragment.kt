@@ -149,8 +149,8 @@ class GameFragment : BaseFragment() {
     private fun checkCoinSuggest() {
         var currentCoin = preference?.getValueCoin() ?: 0
         if (currentCoin < 5) {
+            Toast.makeText(requireContext(), "Không đủ vàng!", Toast.LENGTH_SHORT).show()
             navigateChargeCoin()
-            Toast.makeText(requireContext(), "Không đủ coin!", Toast.LENGTH_SHORT).show()
         } else {
             handleShowSuggest()
             currentCoin -= 5

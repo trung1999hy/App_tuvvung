@@ -33,6 +33,7 @@ class HomeFragment : BaseFragment() {
         initData()
 
         binding.homeIvLogo.setOnClickListener {
+            if (viewModel.isMaxLevel()) return@setOnClickListener
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToGameFragment())
         }
     }

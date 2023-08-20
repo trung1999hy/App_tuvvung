@@ -165,6 +165,13 @@ class SharedViewModel @Inject constructor(
 
     fun setEnableSoundFX(value: Boolean) = sharedRepository.setEnableSoundFX(value)
 
+    fun isMaxLevel(): Boolean {
+        if (sharedRepository.getLevel() == sharedRepository.getInitData().length - 1) {
+            return true
+        }
+        return false
+    }
+
     fun playWin() {
         if (isEnableSound())
             soundRepository.playWin()

@@ -43,6 +43,8 @@ class ResultFragment : BaseFragment() {
 
     private fun initView() {
         binding.resultBtnNext.setOnClickListener {
+            if (viewModel.isMaxLevel())
+                findNavController().navigate(ResultFragmentDirections.actionResultFragmentToHomeFragment())
             findNavController().navigate(ResultFragmentDirections.actionResultFragmentToGameFragment())
         }
         binding.resultBtnQuit.setOnClickListener {
