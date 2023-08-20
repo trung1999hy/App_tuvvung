@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <declare-styleable name="FrameBox">
+        <attr name="has_dash" format="boolean" />
+        <attr name="text_color" format="color" />
+        <attr name="bg_box" format="integer" />
+        <attr name="box_value" format="string" />
+    </declare-styleable>
+
+</resources>

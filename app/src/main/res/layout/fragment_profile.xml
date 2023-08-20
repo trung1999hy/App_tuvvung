@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg_profile">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/profileCardViewContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_60"
+        android:layout_marginTop="@dimen/dp_4"
+        android:backgroundTint="@color/card_background"
+        app:cardCornerRadius="@dimen/dp_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="20dp"
+            android:paddingHorizontal="@dimen/dp_24"
+            android:paddingBottom="@dimen/dp_18">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/profileCoin"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="home/ic_coin.json"
+                app:lottie_loop="true" />
+
+            <TextView
+                android:id="@+id/profileTvCoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/profileCoin"
+                app:layout_constraintEnd_toStartOf="@+id/profileCoin"
+                app:layout_constraintTop_toTopOf="@+id/profileCoin" />
+
+            <TextView
+                android:id="@+id/profileTvLevelUnlocked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="8dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/level_unlocked"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/level_unlocked"
+                tool:text="10" />
+
+            <TextView
+                android:id="@+id/level_unlocked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Màn chơi hiện tại:"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profileCoin" />
+
+            <TextView
+                android:id="@+id/progress_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Bạn đã hoàn thành:"
+                android:textColor="@color/light_background"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/level_unlocked" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/profileProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:progress="100"
+                android:scaleY="5"
+                app:indicatorColor="#D356C6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progress_text"
+                app:trackColor="@color/app_theme" />
+
+            <TextView
+                android:id="@+id/profileTvProgressPercent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="8dp"
+                android:textColor="@color/white"
+                android:paddingBottom="@dimen/dp_2"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/profileProgressBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/profileProgressBar"
+                tool:text="100%" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

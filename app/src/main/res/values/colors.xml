@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red">#C1FF0606</color>
+    <color name="green">#8BC34A</color>
+    <color name="blue">#0080FF</color>
+    <color name="dark_green">#009688</color>
+    <color name="pink">#FA7AA5</color>
+    <color name="purple">#885CD6</color>
+    <color name="yellow">#734751</color>
+    <color name="brown">#653838</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#676767</color>
+    <color name="orange">#FF7A46</color>
+    <color name="mint">#75FFE8</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="primary_color_blue_50">#7FBFFF</color>
+    <color name="primary_color_blue_20">#D1E8FF</color>
+    <color name="primary_color_blue_60">#D8E6F4</color>
+    <color name="primary_color_blue_5">#EDF6FF</color>
+
+    <color name="color_white_50">#80FFFFFF</color>
+    <color name="color_white_20">#33FFFFFF</color>
+    <color name="color_white_80">#CCFFFFFF</color>
+
+    <color name="color_black_05">#0D000000</color>
+    <color name="color_black_10">#1A000000</color>
+    <color name="color_black_15">#26000000</color>
+    <color name="color_black_20">#33000000</color>
+    <color name="color_black_80">#CC000000</color>
+
+    <color name="orange_dark">#FF5D1E</color>
+    <color name="orange_20">#33FFB233</color>
+
+    <color name="blue_dark">#00B2FF</color>
+    <color name="blue_light">#76D6FF</color>
+
+    <color name="dark_gray">#221C27</color>
+    <color name="app_theme">#25243C</color>
+    <color name="light_background">#DEE0FF</color>
+    <color name="dark_background">#22203B</color>
+    <color name="card_background">#39375B</color>
+
+    <color name="purple_light">#9C27B0</color>
+
+    <color name="pink_light">#FFE3F1</color>
+    <color name="pink_dark">#FFB6DA</color>
+
+    <color name="card_board_background">#469B68</color>
+
+
+
+</resources>

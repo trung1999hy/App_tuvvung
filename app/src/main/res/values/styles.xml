@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="GradientFabRed" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_height">10dp</item>
+        <item name="android:layout_width">10dp</item>
+        <item name="android:elevation">10dp</item>
+        <item name="android:background">@drawable/fab_color</item>
+    </style>
+
+    <style name="ButtonCommon" parent="Widget.AppCompat.ImageButton">
+        <item name="android:background">@drawable/button_common_ripple</item>
+    </style>
+
+    <style name="SwitchTextAppearance" parent="@android:style/TextAppearance.Holo.Small">
+        <item name="android:textColor">@drawable/text_color_selector</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>
+
