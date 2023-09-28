@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="fus.com.vuatuvung.ui.home.HomeFragment"
+        android:name="com.tmt.vuaghepchu.ui.home.HomeScreenFragment"
         android:label="@string/home_dashboard"
-        tools:layout="@layout/fragment_home">
+        tools:layout="@layout/fragment_home_screen">
         <action
             android:id="@+id/action_homeFragment_to_gameFragment"
             app:destination="@id/gameFragment"
@@ -25,15 +25,13 @@
             android:id="@+id/action_homeFragment_to_profileFragment"
             app:destination="@id/profileFragment"
             app:popUpTo="@id/homeFragment" />
-
     </fragment>
 
     <fragment
         android:id="@+id/gameFragment"
-        android:name="fus.com.vuatuvung.ui.game.GameFragment"
+        android:name="com.tmt.vuaghepchu.ui.game.GameScreenFragment"
         android:label="@string/result_dashboard"
-        tools:layout="@layout/fragment_game">
-
+        tools:layout="@layout/fragment_game_screen">
         <action
             android:id="@+id/action_gameFragment_to_resultFragment"
             app:destination="@id/resultFragment"
@@ -46,10 +44,9 @@
 
     <fragment
         android:id="@+id/resultFragment"
-        android:name="fus.com.vuatuvung.ui.result.ResultFragment"
+        android:name="com.tmt.vuaghepchu.ui.result.ResultScreenFragment"
         android:label="@string/result_dashboard"
-        tools:layout="@layout/fragment_result">
-
+        tools:layout="@layout/fragment_result_screen">
         <action
             android:id="@+id/action_resultFragment_to_gameFragment"
             app:destination="@id/gameFragment"
@@ -66,18 +63,14 @@
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="fus.com.vuatuvung.ui.profile.ProfileFragment"
+        android:name="com.tmt.vuaghepchu.ui.profile.ProfileScreenFragment"
         android:label="@string/profile_dashboard"
-        tools:layout="@layout/fragment_profile">
-
-    </fragment>
+        tools:layout="@layout/fragment_profile_screen" />
 
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="fus.com.vuatuvung.ui.settings.SettingsFragment"
+        android:name="com.tmt.vuaghepchu.ui.settings.SettingsScreenFragment"
         android:label="@string/setting_dashboard"
-        tools:layout="@layout/fragment_settings">
-
-    </fragment>
+        tools:layout="@layout/fragment_settings_screen" />
 
 </navigation>

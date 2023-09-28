@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace 'fus.com.vuatuvung'
+    namespace 'com.tmt.vuaghepchu'
     compileSdk 33
 
     defaultConfig {
-        applicationId "fus.com.vuatuvung"
+        applicationId "com.tmt.vuaghepchu"
         minSdk 23
         targetSdk 33
         versionCode 1
@@ -37,12 +37,6 @@ android {
             minifyEnabled false
             debuggable true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-
-            /* if you'd like to execute debugger step commands , delete the comment out
-            minifyEnabled false
-            useProguard false
-            debuggable true
-            */
         }
 
         release {

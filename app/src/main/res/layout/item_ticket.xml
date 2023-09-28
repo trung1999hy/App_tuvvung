@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/dp_40"
         android:layout_marginVertical="@dimen/dp_12"
-        android:background="@drawable/bg_card_boder"
+        android:background="@drawable/bg_boder_card"
         android:padding="@dimen/dp_8">
 
         <ImageView

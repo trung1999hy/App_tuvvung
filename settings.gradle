@@ -15,7 +15,7 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
     }
 }
-rootProject.name = "VuaTuVung"
+rootProject.name = "VuaGhepChu"
 include ':app'
 
 include ':iap'

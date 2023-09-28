@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Vua tu vung</string>
+    <string name="app_name">Vua ghep chu</string>
     <string name="home_dashboard">Home</string>
     <string name="game_dashboard">Game</string>
     <string name="result_dashboard">Result</string>
@@ -9,6 +9,4 @@
     <string name="main_tv_ticket">%s ticket</string>
     <string name="charge_tv_coin">%s VND/%s coin</string>
     <string name="message_purchase_one">%s</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -13,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:src="@drawable/home_bg_game" />
+            android:src="@drawable/img_bg_main" />
 
 
         <ImageView
@@ -23,7 +23,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="120dp"
             android:adjustViewBounds="true"
-            android:src="@drawable/bg_logo_home"
+            android:src="@drawable/bg_logo_home_screen"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
