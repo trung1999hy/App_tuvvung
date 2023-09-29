@@ -36,7 +36,7 @@ class BoxTextView : ConstraintLayout {
                     ContextCompat.getDrawable(
                         it, typeArray.getResourceId(
                             R.styleable.FrameBox_bg_box,
-                            R.drawable.img_box_purple
+                            R.drawable.img_box_pink
                         )
                     )
                 })

@@ -7,72 +7,15 @@
     android:background="@drawable/done_bg_type_2"
     android:paddingHorizontal="@dimen/dp_8">
 
-    <com.google.android.material.card.MaterialCardView
+    <include
         android:id="@+id/resultCardViewTop"
+        layout="@layout/fragment_top_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/dp_4"
-        android:layout_marginTop="@dimen/dp_16"
-        android:backgroundTint="@color/card_background"
-        app:cardCornerRadius="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="@dimen/dp_12"
-            android:paddingVertical="@dimen/dp_2">
-
-            <TextView
-                android:id="@+id/resultLevel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Level:"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/resultLevelValue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_4"
-                android:text="0"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/resultLevel"
-                app:layout_constraintStart_toEndOf="@+id/resultLevel"
-                app:layout_constraintTop_toTopOf="@+id/resultLevel" />
-
-            <TextView
-                android:id="@+id/resultCoinValue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="100"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/resultCoin"
-                app:layout_constraintEnd_toStartOf="@+id/resultCoin"
-                app:layout_constraintTop_toTopOf="@+id/resultCoin" />
-
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/resultCoin"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:lottie_autoPlay="true"
-                app:lottie_fileName="home/ic_coin_anim.json"
-                app:lottie_loop="true" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </com.google.android.material.card.MaterialCardView>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/resultIcThreeStar"

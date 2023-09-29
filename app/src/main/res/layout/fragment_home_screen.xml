@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -10,43 +9,44 @@
 
         <ImageView
             android:id="@+id/homeIvLogo"
-            android:layout_width="280dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
-            android:adjustViewBounds="true"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="124dp"
+            android:adjustViewBounds="true"
             android:src="@drawable/bg_logo_home_screen" />
 
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="120dp">
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="@dimen/dp_4"
+            android:layout_marginTop="120dp"
+            app:cardCornerRadius="@dimen/dp_30">
 
-            <ImageButton
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/homeBtnPlay"
                 android:layout_width="180dp"
                 android:layout_height="60dp"
-                android:background="@drawable/btn_cm_ripple"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:layout_width="180dp"
-                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_pink_gradient"
                 android:gravity="center"
-                android:text="Chơi ngay"
-                android:textColor="@color/white"
-                android:textSize="@dimen/dp_20"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:minWidth="120dp"
+                android:paddingHorizontal="@dimen/dp_20"
+                android:paddingVertical="@dimen/dp_2">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/levelViewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chơi thôi"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dp_18"
+                    android:textStyle="bold" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.google.android.material.card.MaterialCardView>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

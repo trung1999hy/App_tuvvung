@@ -35,8 +35,8 @@ class ResultScreenFragment : BaseFragment() {
 
     private fun initData() {
         preference = Preference.buildInstance(requireContext())
-        binding.resultLevelValue.text = viewModel.getLevel().toString()
-        binding.resultCoinValue.text = preference?.getValueCoin().toString()
+        binding.resultCardViewTop.levelViewValue.text = viewModel.getLevel().toString()
+        binding.resultCardViewTop.coinViewValue.text = preference?.getValueCoin().toString()
     }
 
     private fun initView() {
@@ -48,10 +48,7 @@ class ResultScreenFragment : BaseFragment() {
         binding.resultBtnQuit.setOnClickListener {
             findNavController().navigate(ResultScreenFragmentDirections.actionResultFragmentToHomeFragment())
         }
-        binding.resultCoin.setOnClickListener {
-            navigateChargeCoin()
-        }
-        binding.resultCoinValue.setOnClickListener {
+        binding.resultCardViewTop.coinViewContainer.setOnClickListener {
             navigateChargeCoin()
         }
     }

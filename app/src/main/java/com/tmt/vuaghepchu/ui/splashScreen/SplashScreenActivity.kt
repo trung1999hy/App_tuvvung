@@ -21,11 +21,11 @@ class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash_screen)
-        binding.splashText.animate().alpha(1f).setDuration(2000).start()
+        binding.splashText.animate().alpha(1f).setDuration(1200).start()
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
-        }, 2400L)
+        }, 3000L)
     }
 }

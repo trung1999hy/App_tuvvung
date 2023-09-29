@@ -35,7 +35,7 @@ class SplashLoadingView : LottieAnimationView {
 
     private fun initView() {
         imageAssetsFolder = ASSETS_FOLDER
-        setAnimation("$ASSETS_FOLDER/splash_load_anim.json")
+        setAnimation("$ASSETS_FOLDER/island_anim.json")
         repeatCount = LottieDrawable.INFINITE
     }
 

@@ -61,8 +61,8 @@ class GameScreenFragment : BaseFragment() {
         }
         mListData = viewModel.getInitData()
         mCurrentLevel = viewModel.getLevel()
-        binding.gameLevelValue.text = viewModel.getLevel().toString()
-        binding.gameCoinValue.text = preference?.getValueCoin().toString()
+        binding.gameCardViewTop.levelViewValue.text = viewModel.getLevel().toString()
+        binding.gameCardViewTop.coinViewValue.text = preference?.getValueCoin().toString()
         mResult = mListData.getOrNull(mCurrentLevel) ?: Constants.KEY_DEFAULT_TEXT
         initValue(mResult)
     }
@@ -134,10 +134,7 @@ class GameScreenFragment : BaseFragment() {
             viewModel.playClick()
             checkCoinSuggest()
         }
-        binding.gameCoinValue.setOnClickListener {
-            navigateChargeCoin()
-        }
-        binding.gameCoin.setOnClickListener {
+        binding.gameCardViewTop.coinViewContainer.setOnClickListener {
             navigateChargeCoin()
         }
     }
@@ -153,7 +150,7 @@ class GameScreenFragment : BaseFragment() {
         }
 
         preference?.setValueCoin(currentCoin)
-        binding.gameCoinValue.text = currentCoin.toString()
+        binding.gameCardViewTop.coinViewValue.text = currentCoin.toString()
     }
 
     private fun handleShowSuggest() {
