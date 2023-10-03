@@ -1,6 +1,8 @@
 package com.tmt.vuaghepchu.ui.home
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -46,6 +48,10 @@ class HomeScreenFragment : BaseFragment() {
     private fun initAction() {
         binding.homeBtnPlay.setOnClickListener {
             findNavController().navigate(HomeScreenFragmentDirections.actionHomeFragmentToGameFragment())
+        }
+
+        binding.homeBtnMiniGame.setOnClickListener {
+            findNavController().navigate(HomeScreenFragmentDirections.actionHomeFragmentToMiniGameFragment())
         }
     }
 }

@@ -30,6 +30,13 @@
             android:name=".ui.MainActivity"
             android:exported="false" />
         <activity android:name=".ui.chargecoin.ChargeCoinActivity" />
+        <activity
+            android:name=".ui.minigame.activitygame.MiniGameActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

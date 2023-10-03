@@ -18,6 +18,13 @@
             app:popEnterAnim="@anim/enter_from_left"
             app:popExitAnim="@anim/exit_to_right" />
         <action
+            android:id="@+id/action_homeFragment_to_miniGameFragment"
+            app:destination="@id/miniGameFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+        <action
             android:id="@+id/action_homeFragment_to_settingFragment2"
             app:destination="@id/settingsFragment"
             app:popUpTo="@id/homeFragment" />
@@ -35,6 +42,21 @@
         <action
             android:id="@+id/action_gameFragment_to_resultFragment"
             app:destination="@id/resultFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/miniGameFragment"
+        android:name="com.tmt.vuaghepchu.ui.minigame.MiniGameFragment"
+        android:label="@string/result_dashboard"
+        tools:layout="@layout/fragment_minigame">
+        <action
+            android:id="@+id/action_miniGameFragment_to_resultFragment"
+            app:destination="@+id/homeFragment"
             app:enterAnim="@anim/enter_from_right"
             app:exitAnim="@anim/exit_to_left"
             app:popEnterAnim="@anim/enter_from_left"
