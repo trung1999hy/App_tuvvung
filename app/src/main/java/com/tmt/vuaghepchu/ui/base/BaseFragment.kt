@@ -7,8 +7,6 @@ import android.os.VibrationEffect
 import android.os.Vibrator
 import androidx.fragment.app.Fragment
 import com.tmt.vuaghepchu.ui.chargecoin.ChargeCoinActivity
-import com.tmt.vuaghepchu.ui.minigame.activitygame.MiniGameActivity
-import com.tmt.vuaghepchu.ui.minigame.network.Constant
 
 abstract class BaseFragment : Fragment() {
 
@@ -19,11 +17,6 @@ abstract class BaseFragment : Fragment() {
                 ChargeCoinActivity::class.java
             )
         )
-    }
-    fun navigateMiniGame(link : String) {
-        val intent = Intent(requireActivity(), MiniGameActivity::class.java)
-        intent.putExtra(Constant.linkGame, link)
-        startActivity(intent)
     }
 
     fun vibratePhone() {
