@@ -7,7 +7,6 @@ import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.github.jinatonic.confetti.CommonConfetti
@@ -22,6 +21,10 @@ import com.tmt.vuaghepchu.utils.Preference
 
 @AndroidEntryPoint
 class GameScreenFragment : BaseFragment() {
+
+    companion object {
+        private const val KEY_COIN_PLAY = 1
+    }
 
     private lateinit var binding: FragmentGameScreenBinding
     private val viewModel: SharedViewModel by viewModels()
@@ -141,14 +144,13 @@ class GameScreenFragment : BaseFragment() {
 
     private fun checkCoinSuggest() {
         var currentCoin = preference?.getValueCoin() ?: 0
-        if (currentCoin < 5) {
-            Toast.makeText(requireContext(), "Không đủ vàng!", Toast.LENGTH_SHORT).show()
+        if (currentCoin < KEY_COIN_PLAY) {
+            showSnackBar(binding.root, "Không đủ vàng!")
             navigateChargeCoin()
         } else {
             handleShowSuggest()
-            currentCoin -= 5
+            currentCoin -= KEY_COIN_PLAY
         }
-
         preference?.setValueCoin(currentCoin)
         binding.gameCardViewTop.coinViewValue.text = currentCoin.toString()
     }
@@ -243,7 +245,7 @@ class GameScreenFragment : BaseFragment() {
         val value = mapTargetView.asSequence().firstOrNull { it.value.viewAdded == view }
         value?.value?.isAdded = false
         value?.value?.viewAdded = null
-        (value?.value?.view as? BoxTextView)?.let {
+        value?.value?.view?.let {
             if (it.getTextBox() == "") {
                 value.value.canShowSuggestion = true
             }
@@ -282,9 +284,6 @@ class GameScreenFragment : BaseFragment() {
             }
         if (current == mResult) {
             viewModel.addLevel(viewModel.getLevel() + 1)
-            preference?.getValueCoin()?.let {
-                preference?.setValueCoin(it + 5)
-            }
             navigateResult()
         } else if (current.length == mResult.length) {
             if (!viewModel.isEnableSoundFX()) return

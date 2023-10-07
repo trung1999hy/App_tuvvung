@@ -6,11 +6,9 @@
         android:title="profile" />
 
     <item
-        android:id="@+id/placeholder"
-        android:title="   " />
-    <item
-        android:id="@+id/placeholder2"
-        android:title="   " />
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="home" />
 
     <item
         android:id="@+id/settingsFragment"

@@ -17,8 +17,9 @@
     <color name="transparent">#00000000</color>
     <color name="purple_light">#9C27B0</color>
     <color name="pink_dark">#FFB6DA</color>
+    <color name="purple_dark">#7772CD</color>
 
     <color name="light_background">#DEE0FF</color>
-    <color name="dark_background">#22203B</color>
-    <color name="card_background">#171449</color>
+    <color name="dark_background">#4F4AA0</color>
+    <color name="card_background">#4F4AA0</color>
 </resources>

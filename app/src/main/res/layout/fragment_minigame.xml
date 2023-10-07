@@ -5,17 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <include
+        android:id="@+id/mgCardViewTop"
+        layout="@layout/fragment_top_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_score"
+        android:id="@+id/tv_scorex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="64dp"
-        android:text="Score: 100"
+        android:layout_marginTop="60dp"
         android:fontFamily="@font/baloo"
+        android:text="Score: 100"
         android:textColor="#FF0057"
         android:textSize="30dp"
         android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,12 +34,12 @@
         android:id="@+id/cv_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         app:cardCornerRadius="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4">
 
         <ImageView
             android:id="@+id/img_result"
@@ -102,18 +113,5 @@
         </androidx.cardview.widget.CardView>
 
     </RelativeLayout>
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/img_refresh"
-        android:layout_width="55dp"
-        android:visibility="gone"
-        android:layout_height="55dp"
-        android:layout_marginEnd="32dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/refresh"
-        app:layout_constraintBottom_toBottomOf="@id/tv_score"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_score"
-        app:layout_constraintVertical_bias="0.566" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

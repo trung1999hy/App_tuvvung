@@ -1,6 +1,5 @@
 package com.tmt.vuaghepchu.ui
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.google.common.reflect.TypeToken
 import com.google.gson.Gson
@@ -141,12 +140,12 @@ class SharedViewModel @Inject constructor(
         list.add("Xềnh xệc")
         list.add("Xơ xác")
         list.add("Tan tành")
+        list.shuffle()
         list.add("Game over")
 
         list.forEach {
             val temp = it.replace(" ", "")
             if (temp.length <= 8) re.add(temp)
-
         }
         sharedRepository.initData(Gson().toJson(re))
     }
