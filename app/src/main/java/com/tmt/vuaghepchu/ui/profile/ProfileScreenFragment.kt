@@ -48,6 +48,5 @@ class ProfileScreenFragment : BaseFragment() {
         binding.profileProgressBar.progress = viewModel.getProgress()
         binding.profileTvProgressPercent.text = "${viewModel.getProgress()}%"
     }
-
 }
 
